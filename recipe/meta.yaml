@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - make
   host:
+    - sed
 
 test:
   commands:
