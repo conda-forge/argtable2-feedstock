@@ -29,7 +29,7 @@ test:
 
 about:
     home: http://argtable.sourceforge.net/
-    license: LGPL-2
+    license: LGPL-2.0-only
     license_family: LGPL
     license_file: COPYING
     summary: "Argtable is an ANSI C command line parser."
