@@ -10,6 +10,8 @@ source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: http://prdownloads.sourceforge.net/argtable/argtable2-13.tar.gz
     sha256: {{ sha256 }}
+    patches:
+      - fix-newer-mac-osx.patch  # [osx]
 
 build:
     number: 1002
@@ -19,7 +21,6 @@ requirements:
   build:
     - {{ compiler('c') }}
     - make
-    - sed
 
 test:
   commands:

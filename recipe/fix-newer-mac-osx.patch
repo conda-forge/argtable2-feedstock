@@ -1,0 +1,10 @@
+--- src/arg_int.c.orig	2024-04-23 12:48:21.976000000 +0000
++++ src/arg_int.c	2024-04-23 12:48:55.188000000 +0000
+@@ -30,6 +30,7 @@
+ 
+ #include "argtable2.h"
+ #include <limits.h>
++#include <ctype.h>
+ 
+ /* local error codes */
+ enum {EMINCOUNT=1,EMAXCOUNT,EBADINT,EOVERFLOW};
