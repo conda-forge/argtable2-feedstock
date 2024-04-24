@@ -10,15 +10,17 @@ source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: http://prdownloads.sourceforge.net/argtable/argtable2-13.tar.gz
     sha256: {{ sha256 }}
+    patches:
+      - fix-newer-mac-osx.patch  # [osx]
 
 build:
-    number: 1001
+    number: 1002
     skip: true  # [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
-  host:
+    - make
 
 test:
   commands:
@@ -29,7 +31,7 @@ test:
 
 about:
     home: http://argtable.sourceforge.net/
-    license: LGPL-2
+    license: LGPL-2.0-only
     license_family: LGPL
     license_file: COPYING
     summary: "Argtable is an ANSI C command line parser."
@@ -37,6 +39,5 @@ about:
 extra:
     recipe-maintainers:
         - hbredin
+        - martin-g
         - thomasfillon
-
-
