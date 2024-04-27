@@ -14,7 +14,7 @@ source:
       - fix-newer-mac-osx.patch  # [osx]
 
 build:
-    number: 1002
+    number: 1003
     skip: true  # [win]
 
 requirements:
